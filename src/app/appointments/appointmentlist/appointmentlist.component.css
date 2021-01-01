@@ -1,0 +1,29 @@
+.addlist{
+    background: #0680ff;
+    padding: 8px 10px;
+    color: #ffff;
+    font-size: 23px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+}
+.apptlistheadig{
+    background: linear-gradient(120deg, #0bc1ff, #002cff) !important;
+}
+.apptlistheadig h4{
+    color: #fff;
+}
+.close {
+    color: #fff !important;
+}
+
+.modal-content {
+    border: 1px solid transparent;
+}
+
+.form-group {
+    margin-bottom: 12px;
+}
+label {
+    margin-bottom: 6px;
+}

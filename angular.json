@@ -35,6 +35,7 @@
             ],
             "scripts": [
               "src/assets/libs/jquery/jquery.min.js",
+              "src/assets/libs/jquery/jquery.min.js",
               "src/assets/libs/bootstrap/js/bootstrap.bundle.min.js",
               "src/assets/libs/metismenu/metisMenu.min.js",
               "src/assets/libs/simplebar/simplebar.min.js",
