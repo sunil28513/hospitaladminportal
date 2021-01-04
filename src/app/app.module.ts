@@ -1,26 +1,35 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { Routes, RouterModule } from  '@angular/router';
 import { NgModule } from '@angular/core';
-
+import { FormsModule } from '@angular/forms';  
 import {AppointmentsModule} from './appointments/appointments.module';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { SidebarComponent } from './sidebar/sidebar.component';
-import { HeaderComponent } from './header/header.component';
-import { FooterComponent } from './footer/footer.component';
+
+import { routing } from './app.routing';
+import { UserModule } from './user/user.module';
+import { AdminModule } from './admin/admin.module';
+import { LoginComponent } from './user/login/login.component';
+import { SidebarComponent } from './shared/sidebar/sidebar.component';
+import { HeaderComponent } from './shared/header/header.component';
+import { FooterComponent } from './shared/footer/footer.component';
+
 
 @NgModule({
   declarations: [
-    AppComponent,
-    SidebarComponent,
-    HeaderComponent,
-    FooterComponent
+    AppComponent, 
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
+    FormsModule,  
+    routing, 
     AppointmentsModule,
-    AppRoutingModule,
+    UserModule,
+    AdminModule,
+    AppRoutingModule
   ],
+  exports: [RouterModule],
   providers: [],
   bootstrap: [AppComponent]
 })

@@ -1,0 +1,142 @@
+<div class="container-fluid">
+
+    <div class="card">
+        <div class="card-body">
+          <div class="row">
+            <div class="col-md-6">
+                <form>
+                    <div class="form-group">
+                      <div class="row">
+                         <div class="col-md-8">
+                          <input type="text" class="form-control" placeholder="Search By MRN NHSN ...">
+                         </div>
+                         <div class="col-md-4">
+                          <span class="btn btn-danger p-2"><i class="fa fa-search"></i>Search </span>
+                         </div>
+                      </div>
+                    </div>
+                </form>
+            </div>
+            <div class="col-md-6">
+              <form>
+                  <div class="form-group">
+                    <div class="row">
+                       <div class="col-md-8">
+                        <input type="text" class="form-control" placeholder="Search  By Id ...">
+                       </div>
+                       <div class="col-md-4">
+                        <span class="btn btn-danger p-2"><i class="fa fa-search"></i>Search </span>
+                       </div>
+                    </div>
+                  </div>
+              </form>
+          </div>
+        </div>
+            <div class="row">
+                <div class="col-12">
+                    <div class="page-title-box d-flex align-items-center justify-content-between">
+                        <h4 class="mb-0 font-size-18">Create Appointments</h4>
+                    </div>
+                </div>
+            </div>
+            <form #createAppt="ngForm" (ngSubmit)="createapptSubmit(appointment)">
+                <div class="row">
+                    <div class="col-sm-6 col-md-4">
+                     <div class="form-group">
+                        <label> Patient Name : </label>
+                        <input type="text" class="form-control" name="patientname" required ngModel="appointment.userName" name="userName"
+                        #patientName="ngModel">
+                        <span *ngIf="!patientName.valid && patientName.touched">
+                            Patient Name is Required
+                        </span>
+                     </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4">
+                     <div class="form-group">
+                        <label> DOB : </label>
+                        <input type="text" class="form-control" name="dob" required ngModel="appointment.dob" #dob="ngModel">
+                        <span *ngIf="!dob.valid && dob.touched">
+                            DOB  is Required
+                        </span>
+                     </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4">
+                       <div class="form-group">
+                         <label> Clinic Date : </label>
+                         <input type="text" class="form-control" name="clinicdate" ngModel="appointment.clinicdate">
+                       </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4">
+                     <div class="form-group">
+                       <label> Clinic Time : </label>
+                       <input type="text" class="form-control" name="clinictime" ngModel="appointment.clinictime">
+                     </div>
+                  </div>       
+                  <div class="col-sm-6 col-md-4">
+                     <div class="form-group">
+                       <label> MRN NHSN : </label>
+                       <input type="text" class="form-control" name="mrnnhsn" ngModel="appointment.mrnnhsn">
+                     </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4">
+                     <div class="form-group">
+                       <label> Type : </label>
+                       <input type="text" class="form-control" name="type" ngModel="appointment.type">
+                     </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4">
+                     <div class="form-group">
+                       <label> Clinic(Clinic Code) :</label>
+                       <input type="text" class="form-control" name="cliniccode" ngModel="appointment.cliniccode">
+                     </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4">
+                     <div class="form-group">
+                       <label> PC Seen By :</label>
+                       <input type="text" class="form-control" name="pcseenby" ngModel="appointment.pcseenby">
+                     </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4">
+                     <div class="form-group">
+                       <label> N/O :</label>
+                       <input type="text" class="form-control" name="no" ngModel="appointment.no">
+                     </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4">
+                     <div class="form-group">
+                       <label> Ref :</label>
+                       <input type="text" class="form-control" name="ref" ngModel="appointment.ref">
+                     </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4">
+                     <div class="form-group">
+                       <label> Visit :</label>
+                       <input type="text" class="form-control" name="visit" ngModel="appointment.visit">
+                     </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4">
+                     <div class="form-group">
+                       <label> F/U :</label>
+                       <input type="text" class="form-control" name="fu" ngModel="appointment.fu">
+                     </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4">
+                     <div class="form-group">
+                       <label> HRG :</label>
+                       <input type="text" class="form-control" name="hrg" ngModel="appointment.hrg">
+                     </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4">
+                     <div class="form-group">
+                       <label> Letter :</label>
+                       <input type="text" class="form-control" name="letter" ngModel="appointment.letter">
+                     </div>
+                    </div>
+                    <div class="col-md-12 text-center">
+                        <button type="submit" class="btn btn-danger" id="createapptSubmit" [disabled]="!appointment.valid" >Submit</button>
+                    </div>
+                 </div>
+            </form>
+        </div>
+    </div>
+</div>

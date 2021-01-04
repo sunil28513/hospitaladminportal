@@ -28,6 +28,7 @@
               "src/assets"
             ],
             "styles": [
+              "src/assets/libs/bootstrap-datepicker/css/bootstrap-datepicker.min.css",
               "src/assets/css/bootstrap.min.css",
               "src/assets/css/icons.min.css",
               "src/assets/css/app.min.css",
@@ -40,6 +41,7 @@
               "src/assets/libs/metismenu/metisMenu.min.js",
               "src/assets/libs/simplebar/simplebar.min.js",
               "src/assets/libs/node-waves/waves.min.js",
+              "src/assets/libs/bootstrap-datepicker/js/bootstrap-datepicker.min.js",
               "src/assets/js/app.js"
             ]
           },

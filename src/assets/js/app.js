@@ -9,7 +9,8 @@
         document.webkitIsFullScreen || document.mozFullScreen || document.msFullscreenElement || (console.log("pressed"), t("body").removeClass("fullscreen-enable"))
     }
     t("#side-menu").metisMenu(), t("#vertical-menu-btn").on("click", function(e) {
-            e.preventDefault(), t("body").toggleClass("sidebar-enable"), 992 <= t(window).width() ? t("body").toggleClass("vertical-collpsed") : t("body").removeClass("vertical-collpsed")
+        debugger;
+            e.preventDefault(), t("body.hideshow-sidebar").toggleClass("sidebar-enable"), 992 <= t(window).width() ? t("body.hideshow-sidebar").toggleClass("vertical-collpsed") : t("body.hideshow-sidebar").removeClass("vertical-collpsed")
         }), t("#sidebar-menu a").each(function() {
             var e = window.location.href.split(/[?#]/)[0];
             this.href == e && (t(this).addClass("active"), t(this).parent().addClass("mm-active"), t(this).parent().parent().addClass("mm-show"), t(this).parent().parent().prev().addClass("mm-active"), t(this).parent().parent().parent().addClass("mm-active"), t(this).parent().parent().parent().parent().addClass("mm-show"), t(this).parent().parent().parent().parent().parent().addClass("mm-active"))
@@ -41,3 +42,8 @@
             t("#status").fadeOut(), t("#preloader").delay(350).fadeOut("slow")
         }), Waves.init()
 }(jQuery);
+
+
+$(document).on('click','#vertical-menu-btn',function(){
+  $('body.hideshow-sidebar').toggleClass('sidebar-enable vertical-collpsed');
+});
